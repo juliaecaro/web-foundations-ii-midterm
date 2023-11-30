@@ -1,0 +1,117 @@
+/* These are CSS Variables. If you want to change the color scheme, try a different hue between 0 and 270. The colors in the CSS will automatically update. */
+:root {
+  --hue: 40;
+  --choice-hue: 50;
+}
+body {
+	background-color: hsl(0, 0%, 100%);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	font-family: 'Oxygen', Georgia, serif;
+	font-weight: 400;
+	font-size: 17px;
+}
+h1 {
+  color: hsl(335, 64%, 49%);
+  font-family: 'Viga', Helvetica, sans-serif;
+  margin-top: 4rem;
+  text-transform: uppercase;
+	font-size: 48px;
+}
+h2 {
+  color: hsl(335, 64%, 49%);
+  font-family: 'Viga', Helvetica, sans-serif;
+  margin-top: 30px;
+  text-transform: uppercase;
+	font-size: 40px;
+}
+/* styling for the 'Ugh, I can't decide' paragraph. the footer would also normally be affected as well since it's also a paragraph element, but it has its own styling at the bottom of this css page to fix that */
+p {
+	margin-top: -29px;
+}
+button {
+  background-color: hsl(335, 64%, 49%);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Viga', Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 20px;
+  text-transform: uppercase;
+}
+button:hover {
+  background-color: hsl(177, 78%, 35%);
+	color: hsl(0, 0%, 100%);
+}
+ul {
+  margin-top: -37px;
+  padding: 0;
+}
+ul li {
+  background-color: hsl(0, 0%, 82%);
+  border-radius: 10px;
+  list-style: none;
+  margin: 8px;
+  padding: 12px 20px;
+  text-align: center;
+}
+.choice {
+/* the currently selected choice has the specified background color, rather than the randomHighlight function giving it to the chosen option inherently */
+  background-color: hsl(177, 78%, 35%);
+  color: hsl(0, 0%, 100%);
+  position: relative;
+}
+/* styling for the left triangle on the currently selected choice */
+.choice:before {
+  content: "▶";
+	color: black;
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 30px;
+}
+/* styling for the right triangle on the currently selected choice */
+.choice:after {
+  content: "◀";
+	color: black;
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 30px;
+}
+a {
+  color: hsl(335, 64%, 49%);
+  border-bottom: none;
+  box-shadow: none;
+  text-decoration: none;
+}
+a:hover {
+  background-color: none;
+  color: hsl(177, 78%, 35%);
+  text-decoration: none;
+}
+/* styling for the entire footer as a whole */
+footer {
+  position: fixed;
+  bottom: 0;
+	text-align: center;
+	background-color: black;
+	width: 100%;
+}
+/* styling for only the paragraph element located within the footer */
+footer p {
+	background-color: black;
+	margin-top: 11px;
+	margin-bottom: 11px;
+	color: hsl(0, 0%, 100%);
+}
